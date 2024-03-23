@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+<div class="col-12 offset-1  d-flex justify-content-start align-items-center h-100">
+    <div class="w-50">
+        <h5 class="text-center mb-3">
+            完善个人信息
+        </h5>
+        <form role="form" class="d-flex row justify-content-center flex-column needs-validation " novalidate>
+            <div class="form-group d-flex justify-content-around pe-4 p-2">
+                <label for="exampleInputEmail1" class="col-3 text-end">真实姓名：</label>
+                <input type="text" class="form-control " id="exampleInputEmail1" placeholder="realname" required/>
+                <div class="invalid-feedback text-center">
+                    请输入账号
+                </div>
+            </div>
+            <div class="form-group d-flex justify-content-around pe-4 p-2">
+                <label for="exampleFormControlTextarea1" class="col-3 text-end">个人简介：</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="请填写个人简介" rows="3"></textarea>
+            </div>
+            <div class="form-group d-flex justify-content-around pe-4 p-2">
+                <label for="exampleInputPassword" class="col-3 text-end">手机：</label>
+                <input type="text" class="form-control " id="exampleInputPassword"/>
+                <div class="invalid-feedback text-center">
+                    手机号码
+                </div>
+            </div>
+            <div class="form-group d-flex justify-content-around pe-4 p-2">
+                <label for="exampleInputNumber" class="col-3 text-end">电子邮箱：</label>
+                <input type="email" class="form-control " id="exampleInputNumber" placeholder="@qq.com"/>
+                <div class="invalid-feedback text -center">
+                    请输入邮箱
+                </div>
+            </div>
+            <div class="form-group d-flex justify-content-around pe-4 p-2">
+                <label for="exampleInputYZM" class="col-3 text-end">验证码：</label>
+
+                <input type="text" class="form-control " id="exampleInputYZM" required/>
+                <div class="invalid-feedback text-center">
+                    请输入有效验证码
+                </div>
+            </div>
+            <div class="form-group d-flex justify-content-start pe-4 p-2">
+                <label  class="col-3 text-end">性别：</label>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                           value="option1">
+                    <label class="form-check-label" for="inlineRadio1">男</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                           value="option2">
+                    <label class="form-check-label" for="inlineRadio2">女</label>
+                </div>
+            </div>
+            <div class="form-group d-flex justify-content-around pe-4 p-2">
+                <label for="exampleInputSFZ" class="col-3 text-end">身份证号码：</label>
+                <input type="text" class="form-control " id="exampleInputSFZ"/>
+
+            </div>
+            <div class="col-12 text-center mt-3">
+                <button class="btn btn-primary w-50" type="submit"> 更新</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

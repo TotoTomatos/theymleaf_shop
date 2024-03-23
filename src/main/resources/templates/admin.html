@@ -1,0 +1,167 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>类型管理</title>
+  <link rel="stylesheet" th:href="@{../css/bootstrap.min.css}">
+</head>
+<body class="d-flex flex-column vh-100">
+<div th:replace="~{common/header.html}" ></div>
+<div class="d-flex ">
+  <div th:replace="~{common/navBar.html}" ></div>
+  <div class="col-10">
+    <div class="bg-secondary bg-opacity-25 d-flex align-items-center p-1 me-4 rounded">
+      <div class="col-1">
+        <button class="btn btn-danger ms-3"   data-bs-toggle="modal" data-bs-target="#exampleModal">新增</button>
+      </div>
+      <div class="col-1">
+        <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal">修改</button>
+      </div>
+      <div class="col-3">
+        <div class="input-group">
+          <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+        </div>
+      </div>
+      <div class="col-1">
+        <button class="btn btn-primary">查询</button>
+      </div>
+    </div>
+    <!--表格-->
+    <div>
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">内部编码</th>
+          <th scope="col">名称</th>
+          <th scope="col">所属分类</th>
+          <th scope="col">是否显示</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">100001</th>
+          <td>FL0001</td>
+          <td>日用品1</td>
+          <td>000001</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">100002</th>
+          <td>FL0002</td>
+          <td>零食1</td>
+          <td>000002</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">100003</th>
+          <td>FL0003</td>
+          <td>美妆1</td>
+          <td>000003</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">100004</th>
+          <td>FL0004</td>
+          <td>日用品2</td>
+          <td>000001</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">100005</th>
+          <td>FL0005</td>
+          <td>零食2</td>
+          <td>000002</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">100006</th>
+          <td>FL0006</td>
+          <td>美妆2</td>
+          <td>000003</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">100007</th>
+          <td>FL0007</td>
+          <td>日用品3</td>
+          <td>000001</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">100008</th>
+          <td>FL0008</td>
+          <td>零食3</td>
+          <td>000002</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">100009</th>
+          <td>FL0009</td>
+          <td>美妆3</td>
+          <td>000003</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">100010</th>
+          <td>FL0010</td>
+          <td>日用品4</td>
+          <td>000001</td>
+          <td>1</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+      <label class="btn btn-outline-primary" for="btnradio1">1</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio2">2</label>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">新增/修改</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="container-fluid pe-5">
+
+            <div class="form-group d-flex justify-content-around pe-4 p-2 ">
+              <label for="1" class="col-2 text-center">编号：</label>
+              <input type="text" class="form-control " id="1" required/>
+            </div>
+            <div class="form-group d-flex justify-content-around pe-4 p-2">
+              <label for="2" class="col-2 text-center">名称：</label>
+              <input type="text" class="form-control " id="2" required/>
+            </div>
+          <div class="form-group d-flex justify-content-around pe-4 p-2">
+            <label for="3" class="col-2 text-center">描述：</label>
+            <input type="text" class="form-control " id="3" required/>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div th:replace="~{common/footer.html}"></div>
+
+
+<script th:src="@{../js/bootstrap.js}"></script>
+<script th:src="@{../js/bootstrap.bundle.js}"></script>
+</body>
+</html>

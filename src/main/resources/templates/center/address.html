@@ -1,0 +1,93 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="d-flex flex-column col-5 ">
+  <h2 class="mt-5">你的地址</h2>
+  <div class="alert alert-danger">
+    广东省 广州市 黄埔区 太和镇 穗丰村 穗丰村委
+  </div>
+  <div class="alert alert-danger">
+    广东省 深圳市 荔湾区 太和镇 穗丰村 穗丰村委 <span class="text-success">默认地址</span>
+  </div>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary col-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    新增地址
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">请选择地址</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row p-3">
+              <div class="col-4">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>请选择省份</option>
+                  <option value="1">广东省</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="col-4">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>请选择市</option>
+                  <option value="1">广州市</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="col-4">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>请选择区</option>
+                  <option value="1">白云区</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="row p-3">
+              <div class="col-4">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>请选择镇</option>
+                  <option value="1">太和镇</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div class="col-8">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>选择村</option>
+                  <option value="1">穗丰村</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-group mb-3 col-12">
+                <input type="text" class="form-control" placeholder="请输入具体地址" aria-label="Username" aria-describedby="basic-addon1" >
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-primary">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script th:src="@{../js/bootstrap.js}"></script>
+<script th:src="@{../js/bootstrap.bundle.js}"></script>
+</body>
+</html>

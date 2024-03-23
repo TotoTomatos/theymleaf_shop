@@ -1,0 +1,66 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>商品页</title>
+    <link rel="stylesheet" th:href="@{../css/bootstrap.min.css}">
+</head>
+<body>
+
+<div class="container">
+    <div class="row border-top border-3 border-opacity-50 mt-5">
+        <div class="col-5 border-end border-3 border-opacity-50  d-flex justify-content-center align-items-center">
+            <img src="../images/xh_img1.jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="col-7 d-flex justify-content-between flex-column ps-5">
+            <h3>蓝色妖姬</h3>
+            <p>曾经有份爱摆在你面前你不好好珍惜...</p>
+            <div class="w-100 bg-success bg-opacity-25">
+                <p>会员价：￥<span class="color-bar">17.00</span>元</p>
+                <p>优惠价：￥<span class="color-bar">17.00</span>元</p>
+                <p>原价：￥<span class="color-bar">17.00</span>元</p>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bg-white border-0">数量：</span>
+                        <button class="btn btn-outline-secondary" type="button" id="decrease">-</button>
+                        <input type="number" class="form-control text-center" value="0" id="number-input">
+                        <button class="btn btn-outline-secondary" type="button" id="increase">+</button>
+                        <span class="input-group-text bg-white border-0">件（库存量：234件）</span>
+                    </div>
+                </div>
+            </div>
+            <p class="fw-light">-已成交<span>324</span>笔</p>
+            <div class="row text-center">
+                <div class="col-4">
+                    <button type="button" class="btn btn-primary w-75">加入购物车</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-danger w-75">立即购买</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{../js/bootstrap.js}"></script>
+<script th:src="@{../js/bootstrap.bundle.js}"></script>
+</body>
+
+<script>
+    // 获取加减按钮和数字输入框的引用
+    const decreaseBtn = document.getElementById('decrease');
+    const increaseBtn = document.getElementById('increase');
+    const numberInput = document.getElementById('number-input');
+
+    // 为加减按钮添加点击事件监听器
+    decreaseBtn.addEventListener('click', () => {
+        numberInput.value = parseInt(numberInput.value) - 1;
+    });
+
+    increaseBtn.addEventListener('click', () => {
+        numberInput.value = parseInt(numberInput.value) + 1;
+    });
+</script>
+</html>

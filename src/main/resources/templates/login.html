@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container">
+    <div class="row min-vh-100 d-flex justify-content-center">
+        <div class="col-5 d-flex justify-content-center  flex-column">
+            <h5 class="text-center">
+                系统登录
+            </h5>
+            <form role="form" class="d-flex justify-content-center flex-column needs-validation" novalidate>
+                <div class="form-group row p-3">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="账号/手机/邮箱"
+                           required/>
+                    <div class="invalid-feedback text-center">
+                        请输入账号
+                    </div>
+                </div>
+                <div class="form-group row p-3">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入密码"
+                           required/>
+                    <div class="invalid-feedback text-center">
+                        请输入密码
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary text-center">登录</button>
+            </form>
+            <a th:href="@{register}">立即注册</a>
+        </div>
+    </div>
+</div>
+<script th:src="@{js/bootstrap.bundle.js}"></script>
+<script th:src="@{js/bootstrap.js}"></script>
+</body>
+<script>
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // 获取表单验证样式
+            var forms = document.getElementsByClassName('needs-validation');
+            // 循环并禁止提交
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+</html>
